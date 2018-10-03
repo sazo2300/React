@@ -34,6 +34,10 @@ export default class ImageUploader {
 
   }
   imagePath = "";
-
+  uploadByPath(path, pageId, rootPath, type) {
+    uploadImage(path, pageId, rootPath, type)
+      .then(url => { alert('uploaded'); })
+      .catch(error => console.log(error))
+  }
 
 }
